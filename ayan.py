@@ -22,7 +22,7 @@ ACC_FILE = os.getenv("ACC_FILE", "acc.txt")
 MESSAGE_FILE = os.getenv("MESSAGE_FILE", "text.txt")
 TITLE_FILE = os.getenv("TITLE_FILE", "nc.txt")
 
-MSG_DELAY = int(os.getenv("MSG_DELAY", 30))
+MSG_DELAY = int(os.getenv("MSG_DELAY", 20))
 GROUP_DELAY = int(os.getenv("GROUP_DELAY", 4))
 
 DOC_ID = os.getenv("DOC_ID", "29088580780787855")
@@ -284,7 +284,7 @@ async def worker(username, password, proxy, cl):
                     ui_log(username, f"💠 OK → {active_title}")
         ui_log(username, f"✔ ROUND {round_number} Complete")
         round_number += 1
-        await asyncio.sleep(120)
+        await asyncio.sleep(90)
 
 async def main():
     ACCOUNTS = load_accounts(ACC_FILE)
